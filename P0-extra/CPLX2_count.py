@@ -11,7 +11,7 @@ for line in lines:
         info.write(line)
         line = line.lower()
 
-print("- A: ", line.count("a"), "\n- C: ", line.count("c"), "\n- G: ", line.count("g"), "\n- T: ", line.count("t"))
+    print("- A: ", line.count("a"), "\n- C: ", line.count("c"), "\n- G: ", line.count("g"), "\n- T: ", line.count("t"))
 
 info.close()
 
