@@ -13,16 +13,18 @@ def count_a(seq):
 
 #Main program
 
-s = "AGATAGAGATAGCCCAGATCCACAGATACA"
+s = input("Please, introduce a sequence: ")
 
 na = count_a(s)
 
 print("The number of a's is: {}".format(na))
 
 #Calculate the total sequence lenght
+
 tl = len(s)
 
 #Calculate the percentage of a's in the series
+
 perc = round(1000.0 * na / tl, 1)
 
 print("The total lenght of the sequence is: {}".format(tl))
