@@ -35,6 +35,7 @@ s2 = input("Please, introduce sequence 2: ").lower()
 seq_list = [s1, s2]
 
 number = 1
+
 for sequence in seq_list:
 
     print(number, ")")
