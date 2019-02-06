@@ -1,4 +1,4 @@
-def count_bases(seq):
+def count_2bases(seq):
     """This function is for counting the number of a's in the sequence."""
 
     #Counter for bases
