@@ -32,3 +32,4 @@ CLIENT - SERVER
     But, within the same computer there are many applications so we have to use another number, called "port".
     If we want to connect to a server we should indicate the IP address and the port. A standard number for a port is 80.
     If we do not have the port number, we will not be able to connect to the server.
+- If I want to communicate with a server, first I should launch a server.This is an example.
