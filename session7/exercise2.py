@@ -30,4 +30,4 @@ while True:
 
 # I should close the client everytime I send a  new message
 
-# If we put the input of the message before connecting to the server, we make this connection quicker because we write the message first and, when it is ready, we are able to send it in the moment of the connection
+# If we put the input of the message before connecting to the server, we make this connection quicker because we write the message first and, when it is ready, we are able to send it in the moment of the connection"""
