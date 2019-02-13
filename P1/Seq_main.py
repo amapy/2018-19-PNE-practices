@@ -14,6 +14,6 @@ number = 0
 for sequence in my_seq:
     number += 1
     print("SEQUENCE: ", number)
-    print("Length: ", sequence.len()
+    print("Length: ", sequence.len())
     print(sequence.count_base())
     print(sequence.perc())
