@@ -10,6 +10,7 @@ def process_client(cs):
     """Process the client request.
     Parameters:  cs: socket for communicating with the client"""
 
+
     # Read client message. Decode it as a string
     msg = cs.recv(2048).decode("utf-8")
 
