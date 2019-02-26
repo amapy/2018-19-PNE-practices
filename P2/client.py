@@ -1,5 +1,3 @@
-from Seq import Seq
-
 import socket
 
 PORT = 8088
