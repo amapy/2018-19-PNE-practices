@@ -1,24 +1,26 @@
+from Seq import Seq
 import socket
 
-PORT = 8088
+PORT = 8089
 
-IP = "212.128.253.118"
+IP = "127.0.0.1"
 
 while True:
+    message = str(input("Write a sequence: "))
+
     soc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
     soc.connect((IP, PORT))
 
-    message = str(input("Write a sequence: "))
-
     # The reverse of the sequence given by the user
-    reverse_mssg = message.reverse()
+    reverse_mssg = Seq(message).reverse()
 
     # The complement of the reverse
-    complement_mssg = reverse_mssg.complement()
+    complement_mssg = Seq(reverse_mssg).complement()
 
     # Instead of returning the initial message, we send to the server the reverse-complement sequence.
-    soc.send(str.encode(complement_mssg))
+    final = str.encode(complement_mssg)
+    soc.send(final)
 
     msg = soc.recv(2048).decode("utf-8")
 
