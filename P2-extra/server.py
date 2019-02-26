@@ -2,7 +2,7 @@ from Seq import Seq
 import socket
 
 # Configure the Server's IP and PORT
-PORT = 8081
+PORT = 8084
 IP = "127.0.0.1"
 MAX_OPEN_REQUESTS = 5
 
@@ -32,16 +32,13 @@ try:
         msg = clientsocket.recv(2048).decode("utf-8")
         print("Message from client: {}".format(msg))
 
-        # Send the message
-        message = "Hello from the amapy's server"
-        send_bytes = str.encode(message)
-        # We must write bytes, not a string
-        clientsocket.send(send_bytes)
         # Now, we crate a variable for storing the reverse sequence
-        sequence = Seq(message)
+        sequence = Seq(msg)
         reversed_seq = sequence.reverse()
+
         #Now, we send the reversed sequence to the client
-        clientsocket.send("Reversed sequence: ", reversed_seq)
+        final = reversed_seq.encode("utf-8")
+        clientsocket.send(final)
         clientsocket.close()
 
 except socket.error:
