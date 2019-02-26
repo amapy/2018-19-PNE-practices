@@ -1,8 +1,8 @@
 import socket
 
-PORT = 8081
+PORT = 8084
 
-IP = "217.0.0.1"
+IP = "127.0.0.1"
 
 while True:
     message = input("Please, write a sequence: ")
@@ -16,8 +16,6 @@ while True:
 
     msg = soc.recv(2048).decode("utf-8")
 
-    print("Message from server: {}".format(msg))
-
-    print(msg)
+    print("Reversed sequence: {}".format(msg))
 
     soc.close()
